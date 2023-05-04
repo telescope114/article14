@@ -16,14 +16,13 @@
 
 <script lang="ts">
 import {
-  Descriptions,
   Descriptions as ADescriptions
 } from 'ant-design-vue'
 import MyLevel from '../atoms/MyLevel.vue'
 import MyTime from '../atoms/MyTime.vue'
 export default {
   name: 'MyDescription',
-  components: { ADescriptions, ADescriptionsItem: Descriptions.Item, MyLevel, MyTime },
+  components: { ADescriptions, ADescriptionsItem: ADescriptions.Item, MyLevel, MyTime },
   props: {
     value: {
       type: Object,
