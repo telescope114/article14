@@ -2,7 +2,7 @@ import { myTableColumn, antTableColumn } from '../types/myTable'
 import { h } from 'vue'
 import MyProgress from '../atoms/MyProgress.vue'
 import MyBadge from '../atoms/MyBadge.vue'
-import moment from 'moment/moment'
+import MyTime from '../atoms/MyTime.vue'
 
 /** 将外层配置的列选项转化成 ant-table 能识别的column
  *
@@ -51,7 +51,7 @@ export const setColumn = (item: myTableColumn): antTableColumn => {
             domProps: {}
           })
         case 'dateTime':
-          return moment(text).format('YYYY-MM-DD hh:mm:ss')
+          return h(MyTime, { props: { time: text } })
         default:
           return text || '--'
       }
