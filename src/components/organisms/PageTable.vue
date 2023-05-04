@@ -51,6 +51,6 @@ export default {
 
 <style scoped>
 .page-table {
-  height: 800px;
+  height: 550px;
 }
 </style>
