@@ -1,5 +1,5 @@
 <template>
-  <a-descriptions class="my-description" size="default" bordered :column="4" :title="title">
+  <a-descriptions class="my-description" size="default" bordered :column="column" :title="title">
     <template v-for="(item, index) of config">
       <a-descriptions-item
         :key="index"
@@ -36,6 +36,10 @@ export default {
     title: {
       type: String,
       default: () => '基本信息'
+    },
+    column: {
+      type: Number,
+      default: () => 4
     }
   }
 }
